@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Everyday Weather</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4f3bc0f7b0.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <section class="appContent">
+    <form id="city-search">
+      <div class="form-group">
+        <div class="row">
+       <div class="col-8">
+            <input
+          type="text"
+          class="form-control"
+          id="city-input"
+          autofocus="on"
+          placeholder="Enter a city here"
+        />
+    </div>
+    <div class="col-2">
+      <button type="submit" class="btn btn-primary w-100 h-100">Search</button>
+</div>
+<div class="col-2">
+    <button type="button" class="btn btn-secondary w-100 h-100">Current</button>
+</div>
+</div>
+    </form>
+    <main>
+    <section class="selectCity">
+    <div class="row no-gutters">
+        <div class="col-6">
+<div class="selectCityTemp">
+<h1><i class="fas fa-sun"></i></h1>
+    <p> <span id="temperature-now"></span>° <a href="#" id="to-celsius">C</a>/<a href="#" id="to-fahrenheit">F</a></p> 
+
+       
+    
+</div>
+</div>
+<div class="col-6">
+<div class="selectCityInfo">
+  <h1 id="city-result"></h1>
+  <h3 id="today-date"></br>
+ </h3>
+  
+  <h4 id="weather-descriptor"></h4>
+<h4 id="current-hilow"></h4>
+</div>
+</div>
+</div> 
+</section>
+<section class="weekDays">
+    <div class="row no-gutters">
+        <div class="col">
+<div class="card" >
+    <div class="card-body">
+        <h5 class="card-title">Monday</h5>
+       <span class="symbol"> <i class="fas fa-sun"></i></span>
+    </br>
+        67° | 49°
+    </div>
+    </div>
+</div>
+        <div class="col">
+            <div class="card" s>
+                <div class="card-body">
+                    <h5 class="card-title">Tuesday</h5>
+                    <span class="symbol"> <i class="fas fa-sun"></i></span>
+                    </br>73° | 58°
+                </div>
+            </div>
+        </div>
+<div class="col">
+    <div class="card" >
+        <div class="card-body">
+            <h5 class="card-title">Wednesday</h5>
+            <span class="symbol"> <i class="fas fa-sun"></i></span>
+        </br> 80° | 60°
+        </div>
+    </div>
+    </div>
+    <div class="col">
+        <div class="card" >
+            <div class="card-body">
+                <h5 class="card-title">Thursday</h5>
+                <span class="symbol"><i class="fas fa-cloud-sun"></i></span>
+                </br>80° | 64°
+            </div>
+        </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Friday</h5>
+                        <span class="symbol"> <i class="fas fa-sun"></i></span>
+                        </br>75° | 60°
+                    </div>
+                </div>
+</div>
+</section>
+</main>
+<p class="footer">
+   Image courtesy of 
+    <a href="https://unsplash.com/@mohamadaz" target="_blank">
+        Mohammad Alizade</a>
+    <br />
+    Coded by
+    <a href="https://www.linkedin.com/in/katherine-ruark-45a67257/" target=
+    "_blank">Katie Ruark 🐈</a>
+    </p>
+    </section>
+
+    <script src = "src/index.js">
+</script>
+  </body>
+</html>

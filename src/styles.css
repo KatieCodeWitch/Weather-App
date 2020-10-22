@@ -1,0 +1,109 @@
+body {
+  background-color: rgb(0, 0, 0);
+  background-image: url(/Users/katiekate/Desktop/SheCodes/Weather-App/images/mohammad-alizade-S5uV7ro4UPY-unsplash.jpg);
+  background-size: cover;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+main {
+  background: rgba(8, 0, 0, 0.4);
+  border-radius: 10px;
+}
+
+a {
+  color: #fe6651;
+}
+a:hover {
+  color: #f7c7be;
+}
+
+.container {
+  width: 100%;
+}
+.appContent {
+  border-radius: 10px;
+  margin: 5%;
+  padding: 2%;
+}
+.form-group {
+  margin: 5%;
+}
+.form-control {
+  font-size: 24px;
+}
+.btn-primary {
+  background-color: #fe6651;
+  border: 1px solid #fe6651;
+  font-size: 16px;
+
+  box-shadow: 1px 1px 1px #00000071;
+}
+.btn-primary:hover {
+  background-color: #d98748;
+  border: 1px solid #d98748;
+}
+.btn-secondary {
+  background-color: #308391;
+  border: 1px solid #308391;
+  font-size: 16px;
+  box-shadow: 1px 1px 1px #00000071;
+}
+.btn-secondary:hover {
+  background-color: #0f7688;
+  border: 1px solid #0f7688;
+}
+
+.selectCity {
+  margin-top: 10%;
+}
+.selectCityTemp {
+  color: #ffffff;
+  font-size: 34px;
+  margin-top: 12%;
+  text-align: center;
+}
+.selectCityTemp h1 {
+  font-size: 120px;
+}
+
+.selectCityInfo {
+  border-radius: 10px;
+  font-weight: bolder;
+  font-size: 32px;
+  margin-top: 10%;
+  text-shadow: #333331 1px 0 2px;
+}
+#today-date {
+  margin-top: 4%;
+}
+
+.symbol {
+  align-items: center;
+  display: block;
+  font-size: 40px;
+  justify-content: center;
+  padding: 1%;
+  text-align: center;
+}
+
+.card {
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  text-align: center;
+  transition: all 100ms ease-in-out;
+}
+.card-title {
+  text-shadow: #333331 1px 0 2px;
+}
+
+.footer {
+  border-radius: 10px;
+  font-size: 12px;
+  padding: 5px;
+  text-align: center;
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 4%;
+}
