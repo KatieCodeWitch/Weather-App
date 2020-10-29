@@ -64,8 +64,14 @@ h4 {
 .selectCityTemp {
   color: #ffffff;
   font-size: 34px;
-
   text-align: center;
+}
+.selectCityTemp .active {
+  color: #ffffff;
+  cursor: default;
+}
+.selectCityTemp .active:hover {
+  text-decoration: none;
 }
 
 .selectCityInfo {
