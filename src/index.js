@@ -1,3 +1,6 @@
+ let apiKey = "0266533ac4e8b61c19419a959a2b8aae";
+ let units = "metric";
+
 function showWeather(response){
 document.querySelector("#city-result").innerHTML = response.data.name;
 document.querySelector("#temperature-now").innerHTML = Math.round(response.data.main.temp) ;
@@ -10,10 +13,7 @@ rangeElement.innerHTML = `High ${currentHigh}° | Low ${currentLow}°`;
 }
 
 function search(city) {
-let apiKey = "0266533ac4e8b61c19419a959a2b8aae";
-let units = "metric";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
-
 axios.get(apiUrl).then(showWeather); 
 }
 
@@ -32,10 +32,7 @@ search("New York City");
 function showCurrentPosition(position){
 let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
-  let apiKey = "0266533ac4e8b61c19419a959a2b8aae";
-  let units = "metric";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
-
 axios.get(apiUrl).then(showWeather); 
 }
 
