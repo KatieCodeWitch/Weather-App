@@ -1,7 +1,7 @@
 function showWeather(response){
 document.querySelector("#city-result").innerHTML = response.data.name;
 document.querySelector("#temperature-now").innerHTML = Math.round(response.data.main.temp) ;
-document.querySelector("#weather-descriptor").innerHTML = response.data.weather[0].main;
+document.querySelector("#weather-descriptor").innerHTML = response.data.weather[0].description;
 
 let currentHigh = Math.round(response.data.main.temp_max);
 let rangeElement = document.querySelector("#current-hilow");
@@ -83,19 +83,3 @@ dateElement.innerHTML = formatDate(currentTime);
 
 
 
-
-//function convertToCelsius(temperature) {
-//let temperatureNow = document.querySelector("#temperature-now");
-//temperatureNow.innerHTML = "19° ";
-//}
-
-//let toCelsius = document.querySelector("#to-celsius");
-//toCelsius.addEventListener("click", convertToCelsius);
-
-//function convertToF(temperature) {
-//    let temperatureNow = document.querySelector("#temperature-now");
-//    temperatureNow.innerHTML = ;
-//}
-
-//let toFahrenheit = document.querySelector("#to-fahrenheit");
-//toFahrenheit.addEventListener("click", convertToF);
