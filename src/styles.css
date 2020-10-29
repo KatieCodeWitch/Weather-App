@@ -64,11 +64,8 @@ h4 {
 .selectCityTemp {
   color: #ffffff;
   font-size: 34px;
-  margin-top: 12%;
+
   text-align: center;
-}
-.selectCityTemp h1 {
-  font-size: 120px;
 }
 
 .selectCityInfo {

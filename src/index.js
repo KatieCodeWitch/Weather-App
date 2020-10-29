@@ -5,6 +5,8 @@ function showWeather(response){
 document.querySelector("#city-result").innerHTML = response.data.name;
 document.querySelector("#temperature-now").innerHTML = Math.round(response.data.main.temp) ;
 document.querySelector("#weather-descriptor").innerHTML = response.data.weather[0].description;
+document.querySelector("#icon").setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
+document.querySelector("#icon").setAttribute("alt", `http://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png` )
 
 let currentHigh = Math.round(response.data.main.temp_max);
 let rangeElement = document.querySelector("#current-hilow");
