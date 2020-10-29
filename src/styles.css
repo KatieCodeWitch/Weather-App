@@ -86,15 +86,6 @@ h4 {
   margin-top: 4%;
 }
 
-.symbol {
-  align-items: center;
-  display: block;
-  font-size: 40px;
-  justify-content: center;
-  padding: 1%;
-  text-align: center;
-}
-
 .card {
   background-color: transparent;
   border: 1px solid transparent;
