@@ -18,6 +18,10 @@ a:hover {
   color: #f7c7be;
 }
 
+h4 {
+  line-height: 130%;
+}
+
 .container {
   width: 100%;
 }
