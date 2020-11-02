@@ -1,15 +1,10 @@
  let apiKey = "0266533ac4e8b61c19419a959a2b8aae";
  let units = "metric";
  
-function formatDate(date){
-let hours = date.getHours();
-if (hours < 10 ) { 
-    hours = `0${hours}`;
-}
-let minutes = date.getMinutes();
-if (minutes < 10) {
-    minutes = `0${minutes}`;
-}
+function formatDate(timestamp){
+  let date = new Date(timestamp);
+
+
 let dayIndex = date.getDay();
 let days = [ "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 let day = days[dayIndex];
@@ -17,7 +12,7 @@ let monthIndex = date.getMonth();
 let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 let month = months[monthIndex];
 let todayDate = date.getDate();
-return `${day}, ${month} ${todayDate}</br>${hours}:${minutes} ET`;
+return `${day}, ${month} ${todayDate}</br>${formatHours(timestamp)}`;
 }
 
 function formatHours(timestamp) {
@@ -60,7 +55,7 @@ function showForecast(response){
     forecast = response.data.list[index];
     forecastElement.innerHTML += `
     <div class="col">
-     <div class="card" >
+     <div class="card">
         <div class="card-body">
       <h5 class = "card-title">
         ${formatHours(forecast.dt * 1000)}
@@ -128,13 +123,14 @@ function showFahrenheitTemp(event){
     let temperatureElement = document.querySelector("#temperature-now");
     let currentHigh = document.querySelector("#current-high");
     let currentLow = document.querySelector("#current-low");
+   
     let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
     temperatureElement.innerHTML = Math.round(fahrenheitTemp);
     let fahrenheitHigh = (celsiusTempHigh * 9) / 5 + 32; 
     currentHigh.innerHTML = Math.round(fahrenheitHigh);
     let fahrenheitLow = (celsiusTempLow * 9) / 5 + 32; 
     currentLow.innerHTML = Math.round(fahrenheitLow);
-    
+
         celsiusLink.classList.remove("active");
     fahrenheitLink.classList.add("active");
 }
@@ -144,6 +140,7 @@ function showCelsiusTemp(event){
    document.querySelector("#temperature-now").innerHTML = Math.round(celsiusTemp);
     document.querySelector("#current-high").innerHTML = Math.round(celsiusTempHigh);
     document.querySelector("#current-low").innerHTML = Math.round(celsiusTempLow);
+
 
     fahrenheitLink.classList.remove("active");
     celsiusLink.classList.add("active");
